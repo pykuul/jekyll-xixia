@@ -36,9 +36,10 @@ gems:
 # add comment tool
 comments:
   provider: "staticman"
+
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : # "master", "gh-pages"
+  branch                 : # "master"
   commitMessage          : "New comment."
   filename               : comment-{@timestamp}
   format                 : "yml"
@@ -49,6 +50,6 @@ staticman:
     email                : "md5"
   generatedFields:
     date:
-type               : "date"
-options:
-  format           : "iso8601"
+      type               : "date"
+      options:
+        format           : "iso8601"
