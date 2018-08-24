@@ -29,5 +29,5 @@ gems: ['jekyll-paginate']
 exclude: ['README.md', 'LICENSE', "*.bak"]
 
 # automatically create sitemap
-plugins:
-  - jekyll-sitemap
+#plugins:
+#  - jekyll-sitemap
