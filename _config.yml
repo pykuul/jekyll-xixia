@@ -32,3 +32,23 @@ exclude: ['README.md', 'LICENSE', "*.bak"]
 #plugins:
 gems: 
   - jekyll-sitemap
+
+# add comment tool
+comments:
+  provider: "staticman"
+staticman:
+  allowedFields          : ['name', 'email', 'url', 'message']
+  branch                 : # "master", "gh-pages"
+  commitMessage          : "New comment."
+  filename               : comment-{@timestamp}
+  format                 : "yml"
+  moderation             : false
+  path                   : "_data/comments/{options.slug}"
+  requiredFields         : ['name', 'email', 'message']
+  transforms:
+    email                : "md5"
+  generatedFields:
+    date:
+type               : "date"
+options:
+  format           : "iso8601"

@@ -6,7 +6,6 @@ tags: Github Blog
 author: Richard Nguyen
 description: 2 sites, one help to generate ASCII texts for you, another have lots of ASCII pics.
 ---
-## Tạo Sitemap
 Việc có một Sitemap và submit lên các công cụ tìm kiếm như Google, sẽ giúp các công cụ tìm kiếm index trang web nhanh hơn. Để tạo file sitemap tự động các bạn làm như sau:
 
 Mở file `_config.yml` tại thư mục gốc chứa website, thêm vào các dòng lệnh sau:
