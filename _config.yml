@@ -30,4 +30,5 @@ exclude: ['README.md', 'LICENSE', "*.bak"]
 
 # automatically create sitemap
 #plugins:
-#  - jekyll-sitemap
+gems: 
+  - jekyll-sitemap
