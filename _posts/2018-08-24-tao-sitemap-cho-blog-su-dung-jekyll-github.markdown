@@ -14,4 +14,5 @@ Các bạn mở file `_config.yml` tại thư mục gốc website của bạn, t
 gems: 
   - jekyll-sitemap
 {% endhighlight %}
+
 Các bạn commit thay đổi. Hệ thống sẽ tự dộng tạo ra file sitemap.xml cho website của bạn.
