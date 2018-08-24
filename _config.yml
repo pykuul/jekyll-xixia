@@ -10,7 +10,7 @@ url: https://github.com/pykuul/pykuul.github.io
 # be the project name.
 # *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
 #     run it like so: jekyll serve --baseurl=''
-baseurl: ''
+baseurl: '/pykuul.github.io'
 ## default date_format
 date_format: 
   title: "%B-%-d-%Y"
