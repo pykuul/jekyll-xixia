@@ -62,8 +62,10 @@ sau khi các bạn ghi hoặc đọc dữ liệu xong các bạn nên đóng c�
     import time
 
     ser = serial.Serial() # khởi tạo đối tượng Serial
-    ser.close() # close COM trước để đảm bảo không bị Window khóa truy cập tới cổng COM 
-    ser.port = "COM3" # card reader kết nối vào COM 3
+    # đóng cổng COM trước để đảm bảo không bị Window khóa truy cập tới cổng COM 
+    ser.close()
+    # cài đặt thông số cho cổng COM: 
+    ser.port = "COM3" # thiết bị đang kết nối vào COM3
     ser.baudrate = 9600
 
     try:
@@ -75,8 +77,8 @@ sau khi các bạn ghi hoặc đọc dữ liệu xong các bạn nên đóng c�
         data_raw = ser.read(ser.inWaiting()) 
         # dữ liệu đọc được sẽ có dạng như sau: b'\x0207054805\x03\x06'
         # trong đó \x02 là SOL(Start of line), \x03 là EOL (End of line)
-        # dư liệu cần lấy là phần sau SOL và trước EOL ở đây là: 07054805
-        
+        # dữ liệu cần lấy là phần sau SOL và trước EOL ở đây là: 07054805, 8 ký tự
+
         # tách dữ liệu cần lấy
         if len(data_raw) > 9: # kiểm tra xem có đọc đủ dữ liệu cần thiết chưa
             print("Card_id: {}".format(str(data_raw[1:9].decode('utf-8'))))
@@ -85,6 +87,6 @@ sau khi các bạn ghi hoặc đọc dữ liệu xong các bạn nên đóng c�
         ser.close() # đóng cổng COM
     except serial.SerialException as error:
         print(error)
-{% endhighlight %}
+{% endhighlight %}   
 
 **Tài liệu tham khảo:** [https://pythonhosted.org/pyserial/](https://pythonhosted.org/pyserial/)
