@@ -17,9 +17,9 @@ Bài viết này mình sẽ hướng dẫn các bạn cách sử dụng package 
 `sudo apt install pySerial` 
 
 Để sử dụng thư viện pySerial các bạn phải import nó:
-{% highlight python %}    
+{% highlight python %}
     import serial
-{% endhighlight %}  
+{% endhighlight %}
 
 sau đó các bạn khởi tạo đối tượng Serial
 {% highlight python %}
@@ -56,8 +56,6 @@ sau khi các bạn ghi hoặc đọc dữ liệu xong các bạn nên đóng c�
     ser.close()
 {% endhighlight %}   
 
-**Tài liệu tham khảo:** [https://pythonhosted.org/pyserial/](https://pythonhosted.org/pyserial/)
-
 ### Full code
 {% highlight python %}
     import serial
@@ -72,8 +70,15 @@ sau khi các bạn ghi hoặc đọc dữ liệu xong các bạn nên đóng c�
         ser.open() # khởi tạo kết nối tới COM 3
         ser.flushInput() # làm sạch buffer ngõ vào của cổng COM
         time.sleep(1) # Chờ 1 giây
-        data_raw = ser.read(ser.inWaiting()) # đọc toàn bộ dữ liệu từ buffer
-        if len(data_raw) > 9: # kiểm tra xem có đọc đủ dữ liệu cần thiết không
+
+        # đọc toàn bộ dữ liệu từ bộ nhớ buffer
+        data_raw = ser.read(ser.inWaiting()) 
+        # dữ liệu đọc được sẽ có dạng như sau: b'\x0207054805\x03\x06'
+        # trong đó \x02 là SOL(Start of line), \x03 là EOL (End of line)
+        # dư liệu cần lấy là phần sau SOL và trước EOL ở đây là: 07054805
+        
+        # tách dữ liệu cần lấy
+        if len(data_raw) > 9: # kiểm tra xem có đọc đủ dữ liệu cần thiết chưa
             print("Card_id: {}".format(str(data_raw[1:9].decode('utf-8'))))
         else:
             print("Chưa đọc được dữ liệu")
@@ -81,3 +86,5 @@ sau khi các bạn ghi hoặc đọc dữ liệu xong các bạn nên đóng c�
     except serial.SerialException as error:
         print(error)
 {% endhighlight %}
+
+**Tài liệu tham khảo:** [https://pythonhosted.org/pyserial/](https://pythonhosted.org/pyserial/)
