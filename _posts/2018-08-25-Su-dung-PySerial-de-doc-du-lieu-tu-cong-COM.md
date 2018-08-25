@@ -16,7 +16,7 @@ Bài viết này mình sẽ hướng dẫn các bạn cách sử dụng package 
 * Linux:  
 `sudo apt install pySerial` 
 
-Để sử dụng thư viện pySerial các bạn phải import nó:  
+Để sử dụng thư viện pySerial các bạn phải import nó:
 {% highlight python %}    
     import serial
 {% endhighlight %}  
@@ -52,11 +52,11 @@ Các bạn cũng có thể thực hiện lệnh send dữ liệu ra cổng COM b
 {% endhighlight %}
 
 sau khi các bạn ghi hoặc đọc dữ liệu xong các bạn nên đóng cổng COM lại
-{% highlight python %}    
-    import serial
-{% endhighlight %}  
+{% highlight python %}
+    ser.close()
+{% endhighlight %}   
 
-Tài liệu tham khảo: [https://pythonhosted.org/pyserial/](https://pythonhosted.org/pyserial/)
+**Tài liệu tham khảo:** [https://pythonhosted.org/pyserial/](https://pythonhosted.org/pyserial/)
 
 ### Full code
 {% highlight python %}
