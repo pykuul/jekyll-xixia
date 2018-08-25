@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Học lập trình Python: Làm việc với file"
+title:  "Học lập trình Python: Sử dụng multiThread trong PyQt5"
 categories: Python
 tags: Python
 author: Richard Nguyen

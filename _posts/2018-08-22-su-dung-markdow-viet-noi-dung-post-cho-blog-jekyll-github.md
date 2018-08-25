@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Học lập trình Python: Sử dụng pySerial để đọc dữ liệu từ cổng COM máy tính"
+title:  "Sử dụng markdown để viết nội dung post cho blog hay website"
 categories: Python
 tags: Python pySerial
 author: Richard Nguyen
-description: python - doc du lieu tu cong com serial su dung pySerial.
+description: su dung markdown de viet noi dung cho website.
 ---
