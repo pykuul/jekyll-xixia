@@ -77,7 +77,7 @@ sau khi các bạn ghi hoặc đọc dữ liệu xong các bạn nên đóng c�
         data_raw = ser.read(ser.inWaiting()) 
         # dữ liệu đọc được sẽ có dạng như sau: b'\x0207054805\x03\x06'
         # trong đó \x02 là SOL(Start of line), \x03 là EOL (End of line)
-        # dữ liệu cần lấy là phần sau SOL và trước EOL ở đây là: 07054805, 8 ký tự
+        # dữ liệu cần lấy là phần ở giữa SOL và EOL: 07054805 (8 ký tự)
 
         # tách dữ liệu cần lấy
         if len(data_raw) > 9: # kiểm tra xem có đọc đủ dữ liệu cần thiết chưa
