@@ -22,4 +22,4 @@ gems:
 Các bạn commit để lưu các thay đổi. Hệ thống sẽ tự động tạo ra file sitemap.xml cho website của bạn.
 
 kiểm tra sitemap
-![sitemap]({{ site.baseurl }}//assets/images/site-map.png)
+![sitemap]({{ site.baseurl }}/assets/images/site-map.png)
