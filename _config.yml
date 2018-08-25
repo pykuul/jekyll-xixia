@@ -1,7 +1,8 @@
 # Jekyll configuration
 
 name: PyKuul
-description: Tôi là Richard Nguyen！   Tôi đang học Python
+description: Tôi là Richard Nguyen！   
+              Tôi đang học Python
 
 # url is currently only used only for the RSS feed in feed.xml
 url: https://pykuul.github.io

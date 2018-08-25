@@ -9,7 +9,7 @@ description: Script to read serial data from COM port using pySerial.
 
 Bài viết này mình sẽ hướng dẫn các bạn cách sử dụng package PySerial để đọc dữ liệu từ cổng COM của máy tính chạy hệ điều hành window. Cụ thể mình đọc số ID in trên thẻ proximity 125khz dùng đầu đọc thẻ RFID sử dụng cổng COM của hãng ITECH
 
-Trước hết các bạn cần cài đặt gói package pySerial bằng lệnh sau đây:
+Đầu tiên các bạn cần phải cài đặt gói package pySerial bằng lệnh sau đây:
 * Window:  
 `pip install pySerial`
 
@@ -17,22 +17,46 @@ Trước hết các bạn cần cài đặt gói package pySerial bằng lệnh 
 `sudo apt install pySerial` 
 
 Để sử dụng thư viện pySerial các bạn phải import nó:  
+{% highlight python %}    
     import serial
- 
+{% endhighlight %}  
+
 sau đó các bạn khởi tạo đối tượng Serial
 {% highlight python %}
     ser = serial.Serial()
-    ser.port = COM3 # các bạn phải kiểm tra xem đầu đọc thẻ đang kết nối tới cổng COM nào
+    # cài đặt thông số cho cổng COM
+    ser.port = "COM3" # window
+    # ser.port = '/dev/ttyUSB0' # Linux
     ser.baudrate = 9600
-    # ser.bytesize = 8
-    # ser.parity = 'N'
-    # ser.stopbits = 1
-    # ser.timeout = None
-    # ser.xonxoff = 0
-    # ser.rtscts = 0
+    ser.bytesize = 8
+    ser.parity = 'N'
+    ser.stopbits = 1
+    ser.timeout = None
+    ser.xonxoff = 0
+    ser.rtscts = 0
+    # Khởi tạo kết nối tới cổng COM
+    ser.open() 
 {% endhighlight %}
 
+Có nhiều phương thức để đọc dữ liệu:
+{% highlight python %}
+    data = ser.read() # đọc 1 byte
+    data = ser.read(10) # đọc 10 bytes
+    line = ser.readline() # đọc nguyên dòng
+    line = ser.read(ser.inWaiting()) # đọc dữ liệu từ bộ nhớ buffer ngõ vào
+{% endhighlight %}
 
+Các bạn cũng có thể thực hiện lệnh send dữ liệu ra cổng COM bằng lệnh write:
+{% highlight python %}
+    ser.write(b'hello') # b'hello' dùng để chuyển chuỗi hello sang bytes
+{% endhighlight %}
+
+sau khi các bạn ghi hoặc đọc dữ liệu xong các bạn nên đóng cổng COM lại
+{% highlight python %}    
+    import serial
+{% endhighlight %}  
+
+Tài liệu tham khảo: [https://pythonhosted.org/pyserial/](https://pythonhosted.org/pyserial/)
 
 ### Full code
 {% highlight python %}
@@ -53,6 +77,7 @@ sau đó các bạn khởi tạo đối tượng Serial
             print("Card_id: {}".format(str(data_raw[1:9].decode('utf-8'))))
         else:
             print("Chưa đọc được dữ liệu")
+        ser.close() # đóng cổng COM
     except serial.SerialException as error:
         print(error)
 {% endhighlight %}
