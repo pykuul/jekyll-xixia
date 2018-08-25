@@ -1,17 +1,25 @@
 ---
 layout: post
 title:  "Tạo Sitemap tự động cho website tạo bởi Jekyll và Github"
-categories: Github Blog
-tags: Github Blog
+categories: Github
+tags: Github Blog GitBlog GitPages sitemap sitemap.xml
 author: Richard Nguyen
-description: 2 sites, one help to generate ASCII texts for you, another have lots of ASCII pics.
+description: automatically create sitemap.xml for wibsite or blog created by github page and Jekyll.
 ---
-Việc có một Sitemap và submit lên các công cụ tìm kiếm như Google, sẽ giúp các công cụ tìm kiếm index trang web nhanh hơn. Để tạo file sitemap tự động các bạn làm như sau:
+sitemap.xml là gì?
+==================
 
-Mở file `_config.yml` tại thư mục gốc chứa website, thêm vào các dòng lệnh sau:
+sitemap được xem như tấm bản đồ của wibsite. Nó là một tập tin văn bản có chứa toàn bộ các url trên trang web của bạn. Toàn bộ công việc của Sitemap là hướng dẫn cho các bộ máy tìm kiếm thu thập thông tin của trang web hiệu quả đồng thời cập nhật các thay đổi trên trang web của bạn
+
+Do vậy việc có một Sitemap và submit lên các công cụ tìm kiếm như Google, sẽ giúp các công cụ tìm kiếm index trang web nhanh hơn. Bài viết này mình hướng dẫn các bạn tạo ra sitemap tự động cho các website hay blog được tạo từ Jekyll và Github pages
+
+Mở file `_config.yml` tại thư mục gốc chứa website trên repository, thêm vào các dòng lệnh sau:
 {% highlight ruby %}
 gems: 
   - jekyll-sitemap
 {% endhighlight %}
 
 Các bạn commit để lưu các thay đổi. Hệ thống sẽ tự động tạo ra file sitemap.xml cho website của bạn.
+
+kiểm tra sitemap
+![sitemap]({{site.baseurl}}//assets/images/sitemap.png)
