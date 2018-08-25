@@ -4,7 +4,7 @@ title:  "Học lập trình Python: Sử dụng pySerial để đọc dữ liệ
 categories: Python
 tags: Python pySerial
 author: Richard Nguyen
-description: python : doc du lieu tu cong com serial su dung pySerial.
+description: python - doc du lieu tu cong com serial su dung pySerial.
 ---
 
 Bài viết này mình sẽ hướng dẫn các bạn cách sử dụng package pySerial để đọc dữ liệu từ cổng COM của máy tính chạy hệ điều hành window. Cụ thể mình đọc số ID in trên thẻ proximity 125khz dùng đầu đọc thẻ RFID sử dụng cổng COM của hãng ITECH
