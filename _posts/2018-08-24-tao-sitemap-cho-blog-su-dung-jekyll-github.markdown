@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Tạo Sitemap tự động cho website tạo bởi Jekyll và Github"
+title:  "Tạo Blog với Github: Tạo Sitemap tự động cho website sử dụng Jekyll"
 categories: Github
 tags: Github Blog GitBlog GitPages sitemap sitemap.xml
 author: Richard Nguyen
