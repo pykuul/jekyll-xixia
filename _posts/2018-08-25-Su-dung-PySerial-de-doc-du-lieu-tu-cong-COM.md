@@ -10,7 +10,7 @@ description: Script to read data from COM port using PySerial.
 Bài viết này mình sẽ hướng dẫn các bạn cách sử dụng package PySerial để đọc dữ liệu từ cổng COM của máy tính chạy hệ điều hành window. Cụ thể mình đọc card-ID sử dụng đầu đọc thẻ RFID sử dụng cổng COM của hãng ITECH
 
 ### Full code
-
+```Python
     import serial
     import time
 
@@ -30,3 +30,4 @@ Bài viết này mình sẽ hướng dẫn các bạn cách sử dụng package 
             print("Chưa đọc được dữ liệu")
     except serial.SerialException as error:
         print(error)
+```
