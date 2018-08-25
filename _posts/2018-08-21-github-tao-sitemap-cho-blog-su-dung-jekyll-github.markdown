@@ -4,7 +4,7 @@ title:  "Tạo Blog với Github: Tạo Sitemap tự động cho website sử d�
 categories: Github
 tags: Github Blog GitBlog GitPages sitemap sitemap.xml
 author: Richard Nguyen
-description: automatically create sitemap.xml for wibsite or blog created by github page and Jekyll.
+description: tu dong tao sitemap cho website hay blog tao boi Jekyll va github.
 ---
 sitemap.xml là gì?
 ==================
