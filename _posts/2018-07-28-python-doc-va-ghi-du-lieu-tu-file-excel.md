@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Học lập trình Python: Đọc và ghi dữ liệu từ file excel"
+title:  "Python: Đọc và ghi dữ liệu từ file excel"
 categories: Python
 tags: Python excel
 author: Richard Nguyen

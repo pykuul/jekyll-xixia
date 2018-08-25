@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Học lập trình Python: Sử dụng pySerial để đọc dữ liệu từ cổng COM máy tính"
+title:  "Python: Sử dụng pySerial để đọc dữ liệu từ cổng COM máy tính"
 categories: Python
 tags: Python pySerial
 author: Richard Nguyen

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Học lập trình Python: Làm việc với file"
+title:  "Python: Làm việc với file"
 categories: Python
 tags: Python
 author: Richard Nguyen
