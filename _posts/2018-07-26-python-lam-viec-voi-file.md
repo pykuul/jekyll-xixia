@@ -14,6 +14,7 @@ Nội dung bài này sẽ hướng dẫn các thao tác cơ bản liên quan đ�
 Trước khi làm việc với bất cứ file nào thì các bạn cần phải mở file
 
 - **Cú pháp:**
-    file = open(file_name, access_mode, buffering)
-
+````
+file = open(file_name, access_mode, buffering)
+````
 Trong đó
