@@ -1,7 +1,7 @@
 # Jekyll configuration
 
 name: PyKuul
-description: Tôi là Richard Nguyen！   
+description: Richard Nguyen！   
               Tôi đang học Python
 
 # url is currently only used only for the RSS feed in feed.xml
@@ -33,4 +33,8 @@ exclude: ['README.md', 'LICENSE', "*.bak"]
 #plugins:
 gems: 
   - jekyll-sitemap
+
+# add disqus comment
+disqus:
+    shortname: quangtuan1412
 
