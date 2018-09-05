@@ -19,7 +19,7 @@ description: cách gõ code html và bootstrap nhanh.
 * **html elements**: nhập tên bất kỳ và nhấn tab sẽ tự động tạo html tag. Ví dụ: ` div --> <div></div> ` nhập ` foo --> <foo></foo> `
 
 * **Child**: sử dụng dấu ` > ` để tạo các element con (viết liền không khoảng trắng)> ví dụ: `div>ul>li` sẽ tạo ra đoạn code html như sau:  
-	{% highligh html %}
+	{% highlight html %}
 	<div>
     	<ul>
         	<li></li>
@@ -28,14 +28,14 @@ description: cách gõ code html và bootstrap nhanh.
 	{% endhighlight %}
 
 * **Sibling**: sử dụng dấu ` + ` để tạo các element ngang hàng. ví dụ: `div+p+bq` sẽ tạo ra đoạn code html sau:
-	{% highligh html %}
+	{% highlight html %}
 	<div></div>
 	<p></p>
 	<blockquote></blockquote>
 	{% endhighlight %}
 
 * **Multiple**: Sử dụng dấu ` * ` để tảo ra nhiều element cùng lúc. ví dụ `ul>li*5` sẽ tạo ra đoạn code sau:
-	{% highligh html %}
+	{% highlight html %}
 	<ul>
     	<li></li>
     	<li></li>
@@ -46,14 +46,14 @@ description: cách gõ code html và bootstrap nhanh.
 	{% endhighlight %}
 
 * **id và class**: sử dụng ` . ` để tạo class và dấu ` # ` để tạo id cho các element. ví dụ: `div#header+div.page+div#footer.class1.class2.class3` sẽ tự động tạo ra đoạn code html như sau:
-	{% highligh html %}
+	{% highlight html %}
 	<div id="header"></div>
 	<div class="page"></div>
 	<div id="footer" class="class1 class2 class3"></div>
 	{% endhighlight %}
 
 * **Item numbering**: sử dụng dấu ` $ ` để tự động đánh số cho các item của element. ví dụ `ul>li.item$*5` sẽ tự động tạo ra đoạn code sau:
-    {% highligh html %}
+    {% highlight html %}
 	<ul>
     	<li class="item1"></li>
     	<li class="item2"></li>
@@ -64,7 +64,7 @@ description: cách gõ code html và bootstrap nhanh.
 	{% endhighlight %}
 
 * **Text**: sử dụng dấu ` {text here} ` để thêm text cho element. Ví dụ đoạn code sau: `#page>div.logo+ul#navigation>li*5>a{item $}` sẽ tự động tạo ra đoạn code html sau
-	{% highligh html %}
+	{% highlight html %}
 	<div id="page">
     	<div class="logo"></div>
     	<ul id="navigation">
@@ -78,7 +78,7 @@ description: cách gõ code html và bootstrap nhanh.
 	{% endhighlight %}
 
 	Hay đoạn code sau: a>{Click}+b{here} sẽ tự động tạo ra đoạn code html như sau:
-	{% highligh html %}
+	{% highlight html %}
 	<a href="">click<b>here</b></a>
 	{% endhighlight %}
 
