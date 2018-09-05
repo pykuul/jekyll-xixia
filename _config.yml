@@ -36,5 +36,5 @@ gems:
 
 # add disqus comment
 disqus:
-    shortname: 'pykuul'
+    shortname: pykuul
 
