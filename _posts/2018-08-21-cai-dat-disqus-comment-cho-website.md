@@ -53,10 +53,10 @@ comments: true # gán false nếu bạn muốn disable Disqus
 
 Đồng thời thêm đoạn code sau vào trước thẻ `</article>`:
 
-```java
-{% if site.disqus.shortname %}
+```html
+<p>{% if site.disqus.shortname %}
   {% include disqus_comments.html %}
-{% endif %}
+{% endif %}</p>
 ```
 
 các bạn lưu file post.html. Commit toàn bộ các thay đổi vừa rồi cho website của bạn.  
