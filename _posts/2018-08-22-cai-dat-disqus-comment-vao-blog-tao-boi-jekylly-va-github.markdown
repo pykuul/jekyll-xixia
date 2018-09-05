@@ -53,7 +53,7 @@ comments: true # gán false nếu bạn muốn disable Disqus
 
 Đồng thời thêm đoạn code sau vào trước thẻ `</article>`:
 
-```ruby
+```html
 {% if site.disqus.shortname %}
   {% include disqus_comments.html %}
 {% endif %}
