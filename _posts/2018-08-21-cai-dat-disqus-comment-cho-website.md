@@ -55,7 +55,7 @@ comments: true # gán false nếu bạn muốn disable Disqus
 
 ```html
 <p>{% if site.disqus.shortname %}
-  {% include disqus_comments.html %}
+  {% include disqus-comments.html %}
 {% endif %}</p>
 ```
 
