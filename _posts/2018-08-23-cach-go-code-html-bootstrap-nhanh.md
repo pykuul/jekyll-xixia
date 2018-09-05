@@ -14,7 +14,7 @@ description: cách gõ code html và bootstrap nhanh.
 
 ### 1. gõ code html và css nhanh:
 
-* khởi tạo tài liệu html 5: `html:5 ` --> nhấn tab
+* khởi tạo tài liệu html 5: `html:5 `  (sau đó nhấn tab, áp dụng cho tất các các đoạn code bên dưới)
 
 * **html elements**: nhập tên bất kỳ và nhấn tab sẽ tự động tạo html tag. Ví dụ: `div --> <div></div> ` nhập `foo --> <foo></foo> `
 
@@ -34,7 +34,7 @@ description: cách gõ code html và bootstrap nhanh.
 <blockquote></blockquote>
 {% endhighlight %}
 
-* **Multiple**: Sử dụng dấu `* ` để tảo ra nhiều element cùng lúc. ví dụ `ul>li*5 ` sẽ tạo ra đoạn code sau:
+* **Multiple**: Sử dụng dấu `* ` để tạo ra nhiều element cùng lúc. ví dụ `ul>li*5 ` sẽ tạo ra đoạn code sau:
 {% highlight html %}
 <ul>
 	<li></li>
@@ -85,16 +85,19 @@ Hay đoạn code sau: `a>{Click}+b{here} ` sẽ tự động tạo ra đoạn co
 
 ### 2. Cách gõ website bootstrap nhanh:
 
-* khởi tạo tài liệu html 5: ` html:5 ` --> tab
-* Sử dụng gói bootstrap cdn: ` bs3-cdn ` -->tab vào trong thẻ `<header> ` của tài liệu html
-* tạo nav-bar : ` bs3-navbar ` --> ta  (gõ thêm ctr + space để xem thêm suggestion)
-* tạo jumbotron quảng cáo: ` bs3-ju ` -->tab
-* tạo class container: ` .container ` -->tab 
-* bên trong container tạo 1 class row: ` .row ` -->tab
-* bên trong row tạo 1 col chiều ngang 4 cột: ` .col-md-4 ` -->tab
-* bên trong col này tạo 1 list danh sách: ` bs3-list-group ` --> tab
-* tạo 1 col thứ 2 chiều ngang 8 cột: ` .col-md-8 ` --> tab
-* trong col này tạo 1 panel-heading: ` bs3-panel-heading ` --> tab
-* tạo footer: ` footer ` --> tab
-* trong footer tạo đoạn text căn giữa: ` p.text-centre ` --> tab
+* Khởi tạo tài liệu html 5: `html:5 `
+* Sử dụng gói bootstrap cdn: `bs3-cdn ` vào trong thẻ `<header> ` của tài liệu html
+* Tạo nav-bar : `bs3-navbar ` (gõ thêm `ctr + space` để xem thêm các suggestion)
+* Tạo jumbotron quảng cáo: `bs3-ju `
+* Tạo class container chứa nội dung: `.container `
+* Bên trong container tạo 1 class row: `.row `
+* Bên trong row tạo 1 col chiều ngang 4 cột: `.col-md-4 `
+* Bên trong col này tạo 1 list danh sách: `bs3-list-group `
+* Tạo 1 col thứ 2 chiều ngang 8 cột: `.col-md-8 `
+* Trong col này tạo 1 panel-heading: `bs3-panel-heading `
+* Tạo footer: `footer `
+* Trong footer tạo đoạn text căn giữa: `p.text-centre `
+
+Sau khi làm các bước trên các bạn đã có thể dễ dàng tạo ra một website tĩnh bằng bootstrap như hình bên dưới:
+![bootstrap_web_example]({{ site.baseurl }}/assets/images/bootstrap.png)
 
