@@ -15,7 +15,7 @@ Bài viết này tôi sẽ hướng dẫn các bạn cách thêm công cụ comm
 
 1. Mở file `_config.yml ` sau đó add thêm đoạn code bên dưới vào cuối file:
 
-```ruby
+```yaml
 # Add Disqus comments
 disqus:
 	shortname: my_disqus_shortname # my_disqus_shortname là cái shortname các bạn đã lấy được bước 2
@@ -46,7 +46,7 @@ disqus:
 
 3. Mở file `post.html` trong thư mục `_layouts`. thêm vào phần đầu post (YAML front-matter) `comments: true` như sau:
 
-```ruby
+```yaml
 ---
 layout: post
 comments: true # gán false nếu bạn muốn disable Disqus
@@ -56,9 +56,11 @@ comments: true # gán false nếu bạn muốn disable Disqus
 Đồng thời thêm đoạn code sau vào trước thẻ `</article>`:
 
 ```ruby
+{% raw %}
 {% if site.disqus.shortname %}
-  {% include disqus-comments.html %}
+  {% include disqus_comments.html %}
 {% endif %}
+{% endraw %}
 ```
 
 các bạn lưu file post.html. Commit toàn bộ các thay đổi vừa rồi cho website của bạn.  
