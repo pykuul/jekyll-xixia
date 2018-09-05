@@ -35,6 +35,5 @@ gems:
   - jekyll-sitemap
 
 # add disqus comment
-disqus:
-    shortname: pykuul
+disqus: pykuul
 
