@@ -14,6 +14,7 @@ Bài viết này tôi sẽ hướng dẫn các bạn cách thêm công cụ comm
 * Bước tiếp theo là các bạn cấu hình các thông số cho website Jekyll. Thực hiện các bước như sau:
 
 1. Mở file `_config.yml ` sau đó add thêm đoạn code bên dưới vào cuối file:
+
 ```ruby
 # Add Disqus comments
 disqus:
@@ -40,19 +41,24 @@ disqus:
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 {% endif %}
 ```
+
 3. Mở file `post.html` trong thư mục `_layouts`. thêm vào phần đầu post (YAML front-matter) `comments: true` như sau:
+
 ```ruby
 ---
 layout: post
 comments: true # gán false nếu bạn muốn disable Disqus
 ---
 ```
+
 Đồng thời thêm đoạn code sau vào trước thẻ `</article>`:
+
 ```ruby
 {% if site.disqus.shortname %}
   {% include disqus_comments.html %}
 {% endif %}
 ```
+
 các bạn lưu file post.html. Commit toàn bộ các thay đổi vừa rồi cho website của bạn.  
 
 
