@@ -14,13 +14,14 @@ Bài viết này tôi sẽ hướng dẫn các bạn cách thêm công cụ comm
 * Bước tiếp theo là các bạn cấu hình các thông số cho website Jekyll. Thực hiện các bước như sau:
 
 1. Mở file `_config.yml ` sau đó add thêm đoạn code bên dưới vào cuối file:
-```
+{% highlight ruby %}
 # Add Disqus comments
 disqus:
 	shortname: my_disqus_shortname # my_disqus_shortname là cái shortname các bạn đã lấy được bước 2
-```
+{% endhighlight %}
+
 2. Tạo một file tên là `disqus_comments.html` trong thư mục `_includes ` trên website của bạn. Sau đó thêm đoạn code bên dưới vào file và lưu file lại.
-```
+{% highlight ruby %}
 {% if page.comments != false and jekyll.environment == "production" %}
 
   <div id="disqus_thread"></div>
@@ -38,21 +39,23 @@ disqus:
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 {% endif %}
-```
+{% endhighlight %}
+
 3. Mở file `post.html` trong thư mục `_layouts`. thêm vào phần đầu post (YAML front-matter) `comments: true` như sau:
 
-```
+{% highlight ruby %}
 ---
 layout: post
 comments: true # gán false nếu bạn muốn disable Disqus
 ---
-```
+
 Đồng thời thêm đoạn code sau vào trước thẻ `</article>`:
-```
+{% endhighlight %}
+{% highlight ruby %}
 {% if site.disqus.shortname %}
   {% include disqus_comments.html %}
 {% endif %}
-```
+{% endhighlight %}
 
 các bạn lưu file post.html. Commit toàn bộ các thay đổi vừa rồi cho website của bạn.  
 
