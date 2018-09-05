@@ -193,3 +193,6 @@ print(files) # in danh sách files
 
 ### 2.4 Module `os `
 
+
+
+**Tài liệu tham khảo**: [https://docs.python.org/3.5/tutorial/inputoutput.html#reading-and-writing-files](https://docs.python.org/3.5/tutorial/inputoutput.html#reading-and-writing-files) 
