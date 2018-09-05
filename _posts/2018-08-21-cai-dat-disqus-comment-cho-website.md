@@ -23,7 +23,8 @@ disqus:
 2. Tạo một file tên là `disqus_comments.html` trong thư mục `_includes ` trên website của bạn. Sau đó thêm đoạn code bên dưới vào file và lưu file lại.
 
 ```java
-`{% if page.comments != false and jekyll.environment == "production" %}`
+{% raw %}
+{% if page.comments != false and jekyll.environment == "production" %}
 
   <div id="disqus_thread"></div>
   <script>
@@ -39,7 +40,8 @@ disqus:
     })();
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-`{% endif %}`
+{% endif %}
+{% endraw %}
 ```
 
 3. Mở file `post.html` trong thư mục `_layouts`. thêm vào phần đầu post (YAML front-matter) `comments: true` như sau:
@@ -54,9 +56,9 @@ comments: true # gán false nếu bạn muốn disable Disqus
 Đồng thời thêm đoạn code sau vào trước thẻ `</article>`:
 
 ```ruby
-`{% if site.disqus.shortname %}`
+{% if site.disqus.shortname %}
   {% include disqus-comments.html %}
-`{% endif %}`
+{% endif %}
 ```
 
 các bạn lưu file post.html. Commit toàn bộ các thay đổi vừa rồi cho website của bạn.  
